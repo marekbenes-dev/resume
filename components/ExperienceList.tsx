@@ -12,7 +12,7 @@ export default function ExperienceList({ items }: { items: ExperienceItem[] }) {
       <div className="text-md font-text flex flex-col gap-y-16">
         {items.map((it, idx) => (
           <article key={idx} className="flex flex-col">
-            <div className="flex flex-row gap-x-4">
+            <div className="flex flex-col gap-y-4 md:flex-row md:gap-x-4">
               <p className="text-sm min-w-[120px] mt-0.5 font-semibold text-foreground/60">
                 {it.period}
               </p>
