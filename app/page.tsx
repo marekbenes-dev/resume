@@ -88,9 +88,9 @@ export default function Page() {
         }}
       />
 
-      <div className="mx-auto max-w-5xl grid gap-8 lg:grid-cols-[280px_1fr] print:block">
+      <div className="mx-auto max-w-5xl grid gap-8 md:grid-cols-[280px_1fr] print:block px-4">
         <aside
-          className="lg:sticky lg:top-5 lg:self-start lg:pr-6 print:hidden"
+          className="md:sticky md:top-5 md:self-start md:pr-6 print:hidden hidden md:block"
           aria-label="Section navigation"
         >
           <LeftNav sections={sections} />
