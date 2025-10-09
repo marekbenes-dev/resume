@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Marek Beneš — Resume",
     description: "Experience, projects, skills, education, and contact.",
-    url: "https://example.com",
+    url: "https://marek-resume-next.vercel.app/",
     siteName: "Marek Beneš — Resume",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Marek Beneš" }],
     type: "profile",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="scroll-smooth motion-reduce:scroll-auto dark" suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth motion-reduce:scroll-auto" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -38,10 +38,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               try {
                 const KEY = 'marek-resume-theme';
                 const saved = localStorage.getItem(KEY); // 'dark' | 'light' | null
-                const hour = new Date().getHours();
                 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                const autoDark = (hour >= 21 || hour < 7);
-                const dark = saved ? (saved === 'dark') : (autoDark || prefersDark);
+                const dark = saved ? (saved === 'dark') : prefersDark;
                 document.documentElement.classList.toggle('dark', dark);
               } catch {}
             `,

@@ -79,7 +79,7 @@ export default function Page() {
             "@type": "Person",
             "name": "Marek Beneš",
             "jobTitle": "FE developer",
-            "url": "https://example.com",
+            "url": "https://marek-resume-next.vercel.app/",
             "sameAs": [
               "https://github.com/marekbenes-dev",
               "https://www.linkedin.com/in/marek-beneš-936279154/"
