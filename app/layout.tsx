@@ -37,9 +37,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: `
               try {
                 const KEY = 'marek-resume-theme';
-                const saved = localStorage.getItem(KEY); // 'dark' | 'light' | null
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                const dark = saved ? (saved === 'dark') : prefersDark;
+                const saved = localStorage.getItem(KEY);
+                const dark = saved === 'dark';
                 document.documentElement.classList.toggle('dark', dark);
               } catch {}
             `,
